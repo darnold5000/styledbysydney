@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { stylistConfig } from "@/config/stylist";
 import Footer from "@/components/Footer";
 import StickyBookButton from "@/components/StickyBookButton";
@@ -66,6 +67,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <StickyBookButton />
+        <Analytics />
       </body>
     </html>
   );
