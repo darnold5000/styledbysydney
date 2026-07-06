@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
-import QuickBooking from "@/components/QuickBooking";
+import BookingSection from "@/components/BookingSection";
 import ServicesSection from "@/components/ServicesSection";
 import GallerySection from "@/components/GallerySection";
-import AboutSection from "@/components/AboutSection";
 import LocationSection from "@/components/LocationSection";
 import ContactSection from "@/components/ContactSection";
 import AddToHomeScreen from "@/components/AddToHomeScreen";
@@ -15,10 +14,9 @@ export default function HomePage() {
       <JsonLd data={[personSchema(), localBusinessSchema()]} />
       <main>
         <Hero />
-        <QuickBooking />
+        <BookingSection />
         <ServicesSection />
         <GallerySection />
-        <AboutSection />
         <LocationSection />
         <ContactSection />
         <AddToHomeScreen />

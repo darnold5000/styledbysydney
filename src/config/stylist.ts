@@ -10,10 +10,10 @@ export type GalleryImage = {
   placeholder?: boolean;
 };
 
-function getBookingUrl(): string {
+function getCalendlyUrl(): string {
   return (
-    process.env.NEXT_PUBLIC_BOOKING_URL ??
     process.env.NEXT_PUBLIC_CALENDLY_SYDNEY_URL ??
+    process.env.NEXT_PUBLIC_BOOKING_URL ??
     ""
   );
 }
@@ -42,10 +42,8 @@ export const stylistConfig = {
       "Located inside Bloom Studio Salon. Suite 370 — free parking available in the lot.",
   },
 
-  bookingUrl: getBookingUrl(),
+  calendlyUrl: getCalendlyUrl(),
   bookingLabel: "Book with Sydney",
-  bookingNote:
-    "Schedule online through Calendly. You can also call or text Sydney if you have questions before booking.",
 
   phone: "(317) 460-3881",
   phoneHref: "tel:+13174603881",
@@ -123,10 +121,3 @@ export const stylistConfig = {
   },
 } as const;
 
-export function getPrimaryBookingHref(): string {
-  return stylistConfig.bookingUrl || stylistConfig.smsHref;
-}
-
-export function hasOnlineBooking(): boolean {
-  return Boolean(stylistConfig.bookingUrl);
-}
