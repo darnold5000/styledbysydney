@@ -1,8 +1,3 @@
-export type ServiceItem = {
-  title: string;
-  description: string;
-};
-
 export type GalleryImage = {
   src: string;
   alt: string;
@@ -58,26 +53,6 @@ export const stylistConfig = {
 
   yearsExperience: "7 years",
   specialties: ["Color", "Cuts", "Styling"] as const,
-
-  services: [
-    {
-      title: "Color",
-      description:
-        "Custom color services tailored to your hair goals — from refreshes to full transformations.",
-    },
-    {
-      title: "Cuts",
-      description:
-        "Personalized haircuts shaped for your texture, lifestyle, and how you like to wear your hair.",
-    },
-    {
-      title: "Styling",
-      description:
-        "Blowouts, finishing, and styling for everyday polish or your next special occasion.",
-    },
-  ] satisfies ServiceItem[],
-
-  pricingNote: "Pricing available when you book online.",
 
   galleryImages: [
     {
