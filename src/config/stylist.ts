@@ -10,14 +10,23 @@ export type GalleryImage = {
   placeholder?: boolean;
 };
 
+function getBookingUrl(): string {
+  return (
+    process.env.NEXT_PUBLIC_BOOKING_URL ??
+    process.env.NEXT_PUBLIC_CALENDLY_SYDNEY_URL ??
+    ""
+  );
+}
+
 export const stylistConfig = {
   name: "Sydney",
+  title: "Hairstylist",
   brandName: "Styled by Sydney",
   shortName: "Sydney Hair",
   headline: "Hair by Sydney",
   tagline:
-    "Personalized color, cuts, and styling designed to make booking simple.",
-  siteUrl: "https://bookwithsydney.com",
+    "Personalized color, cuts, and styling at Bloom Studio Salon in Avon, Indiana.",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bookwithsydney.com",
 
   salonName: "Bloom Studio Salon",
   location: {
@@ -33,54 +42,44 @@ export const stylistConfig = {
       "Located inside Bloom Studio Salon. Suite 370 — free parking available in the lot.",
   },
 
-  /** Swap this URL for Square, GlossGenius, Vagaro, Calendly, Boulevard, Fresha, Booksy, etc. */
-  bookingUrl:
-    process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://example.com/sydney-booking",
+  bookingUrl: getBookingUrl(),
+  bookingLabel: "Book with Sydney",
   bookingNote:
-    "Use your preferred booking app or scheduler here — Square, GlossGenius, Vagaro, Calendly, and more.",
+    "Schedule online through Calendly. You can also call or text Sydney if you have questions before booking.",
 
   phone: "(317) 460-3881",
   phoneHref: "tel:+13174603881",
   smsHref: "sms:+13174603881",
   email: "syney_strode@yahoo.com",
-  instagram: "https://www.instagram.com/", // TODO: Add Sydney's Instagram URL
+  instagram: "",
 
   heroImage: "/images/sydney.jpg",
   aboutImage: "/images/sydney.jpg",
 
-  about:
-    "Sydney helps clients feel confident with hair that fits their style, routine, and personality. Whether you're booking a refresh, a color service, or a full transformation, the goal is to make the experience easy from start to finish.",
+  bio: "My name is Sydney. I've been in the hair industry for 7 years now. I grew up with a mom that loved doing hair, so I've known since I was young that this was the career path for me. I am recently married and in our free time you can find us traveling, riding around with my jeep top off, or playing in the backyard with our two pups.",
 
   yearsExperience: "7 years",
+  specialties: ["Color", "Cuts", "Styling"] as const,
 
   services: [
     {
-      title: "Haircuts",
-      description: "Fresh shapes and trims tailored to your hair texture and lifestyle.",
-    },
-    {
       title: "Color",
-      description: "Custom color that enhances your natural tone and complements your skin.",
+      description:
+        "Custom color services tailored to your hair goals — from refreshes to full transformations.",
     },
     {
-      title: "Highlights",
-      description: "Dimension and brightness with a natural, lived-in finish.",
-    },
-    {
-      title: "Balayage",
-      description: "Soft, sun-kissed color painted for a low-maintenance grow-out.",
+      title: "Cuts",
+      description:
+        "Personalized haircuts shaped for your texture, lifestyle, and how you like to wear your hair.",
     },
     {
       title: "Styling",
-      description: "Blowouts, event styling, and finishing touches for any occasion.",
-    },
-    {
-      title: "Consultations",
-      description: "Not sure what to book? Start with a quick consult to plan your look.",
+      description:
+        "Blowouts, finishing, and styling for everyday polish or your next special occasion.",
     },
   ] satisfies ServiceItem[],
 
-  pricingNote: "Pricing available through booking link.",
+  pricingNote: "Pricing available when you book online.",
 
   galleryImages: [
     {
@@ -105,7 +104,7 @@ export const stylistConfig = {
     },
     {
       src: "/images/gallery/placeholder-5.jpg",
-      alt: "Balayage color — placeholder",
+      alt: "Color and cut — placeholder",
       placeholder: true,
     },
     {
@@ -123,3 +122,11 @@ export const stylistConfig = {
     url: "https://hiresignalworks.com",
   },
 } as const;
+
+export function getPrimaryBookingHref(): string {
+  return stylistConfig.bookingUrl || stylistConfig.smsHref;
+}
+
+export function hasOnlineBooking(): boolean {
+  return Boolean(stylistConfig.bookingUrl);
+}

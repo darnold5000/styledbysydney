@@ -17,10 +17,10 @@ export default function Hero() {
 
           <p className="mt-5 text-sm text-muted">
             <span className="font-medium text-text">
-              {stylistConfig.name} at {stylistConfig.salonName}
+              {stylistConfig.name} · {stylistConfig.title}
             </span>
             <br />
-            {stylistConfig.location.label}
+            {stylistConfig.salonName} · {stylistConfig.location.label}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

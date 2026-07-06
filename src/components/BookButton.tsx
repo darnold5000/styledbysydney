@@ -1,4 +1,4 @@
-import { stylistConfig } from "@/config/stylist";
+import { getPrimaryBookingHref, hasOnlineBooking, stylistConfig } from "@/config/stylist";
 
 type BookButtonProps = {
   label?: string;
@@ -7,7 +7,7 @@ type BookButtonProps = {
 };
 
 export default function BookButton({
-  label = `Book with ${stylistConfig.name}`,
+  label,
   className = "",
   size = "default",
 }: BookButtonProps) {
@@ -16,14 +16,20 @@ export default function BookButton({
       ? "px-8 py-4 text-base"
       : "px-7 py-3.5 text-sm";
 
+  const href = getPrimaryBookingHref();
+  const buttonLabel =
+    label ??
+    (hasOnlineBooking()
+      ? stylistConfig.bookingLabel
+      : `Text ${stylistConfig.name}`);
+
   return (
     <a
-      href={stylistConfig.bookingUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      {...(hasOnlineBooking() ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={`inline-flex items-center justify-center rounded-full bg-accent font-semibold text-white shadow-sm transition hover:bg-accent/90 ${sizeClasses} ${className}`}
     >
-      {label}
+      {buttonLabel}
     </a>
   );
 }

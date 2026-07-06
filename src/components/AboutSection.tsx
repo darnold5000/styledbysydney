@@ -18,7 +18,7 @@ export default function AboutSection() {
           <h2 className="font-serif text-3xl font-medium text-text sm:text-4xl">
             About {stylistConfig.name}
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted">{stylistConfig.about}</p>
+          <p className="mt-6 text-lg leading-relaxed text-muted">{stylistConfig.bio}</p>
           <p className="mt-4 text-sm font-medium text-accent">
             {stylistConfig.yearsExperience} of experience
           </p>

@@ -7,7 +7,7 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
         <SectionHeading
           title="Services"
-          description="From everyday refreshes to full color transformations."
+          description={`${stylistConfig.name} specializes in ${stylistConfig.specialties.join(", ").toLowerCase()}.`}
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {stylistConfig.services.map((service) => (

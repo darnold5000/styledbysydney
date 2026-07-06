@@ -5,7 +5,7 @@ export function personSchema() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: stylistConfig.name,
-    jobTitle: "Hair Stylist",
+    jobTitle: stylistConfig.title,
     worksFor: {
       "@type": "HairSalon",
       name: stylistConfig.salonName,
@@ -52,7 +52,7 @@ export function localBusinessSchema() {
     employee: {
       "@type": "Person",
       name: stylistConfig.name,
-      jobTitle: "Hair Stylist",
+      jobTitle: stylistConfig.title,
     },
   };
 }
