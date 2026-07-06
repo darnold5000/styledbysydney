@@ -15,12 +15,15 @@ function getCalendlyUrl(): string {
 
 export const stylistConfig = {
   name: "Sydney",
-  title: "Hairstylist",
+  title: "Licensed Hairstylist",
   brandName: "Styled by Sydney",
   shortName: "Sydney Hair",
   headline: "Hair by Sydney",
   tagline:
-    "Personalized color, cuts, and styling at Bloom Studio Salon in Avon, Indiana.",
+    "Creating effortless color, fresh cuts, and styles you'll love—right here in Avon, Indiana.",
+  experienceBadge: "7+ Years Behind the Chair",
+  specialtyBadges: ["Color Specialist", "Cuts & Styling", "Balayage & Highlights"] as const,
+  servicesLinkLabel: "Explore Services",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bookwithsydney.com",
 
   salonName: "Bloom Studio Salon",
@@ -49,10 +52,10 @@ export const stylistConfig = {
   heroImage: "/images/sydney.jpg",
   aboutImage: "/images/sydney.jpg",
 
-  bio: "My name is Sydney. I've been in the hair industry for 7 years now. I grew up with a mom that loved doing hair, so I've known since I was young that this was the career path for me. I am recently married and in our free time you can find us traveling, riding around with my jeep top off, or playing in the backyard with our two pups.",
-
-  yearsExperience: "7 years",
-  specialties: ["Color", "Cuts", "Styling"] as const,
+  bio: [
+    "Hi, I'm Sydney! You'll receive personalized hair color, cuts, and styling backed by over seven years behind the chair. I knew from a young age this was the career I wanted—inspired by growing up around my mom's passion for hair.",
+    "I love creating looks that fit your lifestyle while making every appointment relaxed and enjoyable. When I'm not in the salon, you'll usually find me traveling with my husband, driving my Jeep with the top off, or spending time with our two pups.",
+  ] as const,
 
   galleryImages: [
     {

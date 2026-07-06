@@ -8,7 +8,7 @@ export default function BookingSection() {
       <div className="mx-auto max-w-4xl px-5 sm:px-6">
         <SectionHeading
           title={`Schedule with ${stylistConfig.name}`}
-          description="Pick a time that works for you — booking happens right here on this page."
+          description="Choose a time that works for you — your appointment is just a few taps away."
         />
         <div className="mt-8">
           <CalendlyEmbed url={stylistConfig.calendlyUrl} />

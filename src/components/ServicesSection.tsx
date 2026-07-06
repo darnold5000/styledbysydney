@@ -24,7 +24,7 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
         <SectionHeading
           title="Services & Pricing"
-          description={`${stylistConfig.name} specializes in ${stylistConfig.specialties.join(", ").toLowerCase()}. Expand a category to view pricing.`}
+          description="Discover color, cuts, and styling tailored to your hair goals. Expand a category to view pricing."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {pricingCategories.map((category) => (

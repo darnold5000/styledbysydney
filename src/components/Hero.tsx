@@ -15,25 +15,34 @@ export default function Hero() {
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-muted">{stylistConfig.tagline}</p>
 
-          <div className="mt-6">
-            <p className="text-sm font-semibold uppercase tracking-wider text-accent">
-              {stylistConfig.yearsExperience} of experience
-            </p>
-            <h2 className="mt-4 font-serif text-2xl font-medium text-text sm:text-3xl">
-              About {stylistConfig.name}
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-muted sm:text-lg">
-              {stylistConfig.bio}
-            </p>
+          <ul className="mt-5 flex flex-wrap gap-2">
+            {stylistConfig.specialtyBadges.map((badge) => (
+              <li
+                key={badge}
+                className="rounded-full border border-accent/30 bg-accent-soft/40 px-3.5 py-1.5 text-xs font-semibold text-text sm:text-sm"
+              >
+                {badge}
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-accent">
+            {stylistConfig.experienceBadge}
+          </p>
+
+          <div className="mt-4 space-y-4 text-base leading-relaxed text-muted sm:text-lg">
+            {stylistConfig.bio.map((paragraph) => (
+              <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+            ))}
           </div>
 
-          <p className="mt-5 text-sm text-muted">
-            <span className="font-medium text-text">
-              {stylistConfig.name} · {stylistConfig.title}
-            </span>
-            <br />
-            {stylistConfig.salonName} · {stylistConfig.location.label}
-          </p>
+          <div className="mt-6 border-t border-border pt-5">
+            <p className="font-serif text-xl font-medium text-text">{stylistConfig.name}</p>
+            <p className="mt-1 text-sm text-muted">
+              {stylistConfig.title} at {stylistConfig.salonName}
+            </p>
+            <p className="mt-1 text-sm text-muted">{stylistConfig.location.label}</p>
+          </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <BookButton size="large" />
@@ -41,7 +50,7 @@ export default function Hero() {
               href="#services"
               className="inline-flex items-center justify-center rounded-full border border-border bg-background px-8 py-4 text-base font-semibold text-text transition hover:border-accent hover:text-accent"
             >
-              View Services
+              {stylistConfig.servicesLinkLabel}
             </a>
           </div>
         </div>
@@ -49,7 +58,7 @@ export default function Hero() {
         <div className="relative order-1 mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-accent-soft/40 shadow-lg lg:sticky lg:top-8 lg:mx-0 lg:max-w-md">
           <Image
             src={stylistConfig.heroImage}
-            alt={`${stylistConfig.name}, hair stylist in ${stylistConfig.location.label}`}
+            alt={`${stylistConfig.name}, licensed hairstylist in ${stylistConfig.location.label}`}
             fill
             priority
             className="object-cover object-top"

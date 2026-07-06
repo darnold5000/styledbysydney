@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(stylistConfig.siteUrl),
   title: "Hair by Sydney | Avon Indiana Stylist",
   description:
-    "Book haircuts, color, highlights, balayage, and styling appointments with Sydney at Bloom Studio Salon in Avon, Indiana.",
+    "Book effortless color, fresh cuts, and styles you'll love with Sydney — licensed hairstylist at Bloom Studio Salon in Avon, Indiana.",
   keywords: [
     "Avon Indiana hair stylist",
     "hair stylist in Avon IN",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair by Sydney | Avon Indiana Stylist",
     description:
-      "Book haircuts, color, highlights, balayage, and styling with Sydney at Bloom Studio Salon in Avon, Indiana.",
+      "Book effortless color, fresh cuts, and styles you'll love with Sydney at Bloom Studio Salon in Avon, Indiana.",
     url: stylistConfig.siteUrl,
     siteName: stylistConfig.brandName,
     locale: "en_US",
