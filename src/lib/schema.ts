@@ -23,7 +23,7 @@ export function personSchema() {
     telephone: stylistConfig.phone,
     areaServed: {
       "@type": "City",
-      name: "Avon",
+      name: "Plainfield",
       containedInPlace: {
         "@type": "State",
         name: "Indiana",

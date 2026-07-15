@@ -19,7 +19,7 @@ export const stylistConfig = {
   shortName: "Maya Hair",
   headline: "Hair by Maya",
   tagline:
-    "Creating effortless color, fresh cuts, and styles you'll love—right here in Avon, Indiana.",
+    "Creating effortless color, fresh cuts, and styles you'll love—right here in Plainfield, Indiana.",
   experienceBadge: "7+ Years Behind the Chair",
   specialtyBadges: ["Color Specialist", "Cuts & Styling", "Balayage & Highlights"] as const,
   servicesLinkLabel: "Explore Services",
@@ -27,14 +27,14 @@ export const stylistConfig = {
 
   salonName: "Willow & Mane",
   location: {
-    city: "Avon",
+    city: "Plainfield",
     state: "IN",
-    label: "Avon, Indiana",
-    street: "192 N Avon Ave. suite 370",
-    zip: "46123",
-    full: "192 N Avon Ave. suite 370, Avon, IN 46123",
+    label: "Plainfield, Indiana",
+    street: "192 N Main St. suite 370",
+    zip: "46168",
+    full: "192 N Main St. suite 370, Plainfield, IN 46168",
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=192+N+Avon+Ave+suite+370+Avon+IN+46123",
+      "https://www.google.com/maps/search/?api=1&query=192+N+Main+St+suite+370+Plainfield+IN+46168",
     parkingNote:
       "Located inside Willow & Mane. Suite 370 — free parking available in the lot.",
   },

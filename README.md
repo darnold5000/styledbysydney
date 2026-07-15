@@ -1,6 +1,6 @@
 # Styled by Maya
 
-Personal one-page booking site for Maya — a hair stylist at Willow & Mane in Avon, Indiana.
+Personal one-page booking site for Maya — a hair stylist at Willow & Mane in Plainfield, Indiana.
 
 ## Quick start
 

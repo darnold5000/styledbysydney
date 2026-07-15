@@ -17,21 +17,21 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(stylistConfig.siteUrl),
-  title: "Hair by Maya | Avon Indiana Stylist",
+  title: "Hair by Maya | Plainfield Indiana Stylist",
   description:
-    "Book effortless color, fresh cuts, and styles you'll love with Maya — licensed hairstylist at Willow & Mane in Avon, Indiana.",
+    "Book effortless color, fresh cuts, and styles you'll love with Maya — licensed hairstylist at Willow & Mane in Plainfield, Indiana.",
   keywords: [
-    "Avon Indiana hair stylist",
-    "hair stylist in Avon IN",
+    "Plainfield Indiana hair stylist",
+    "hair stylist in Plainfield IN",
     "Willow & Mane stylist",
-    "hair color Avon Indiana",
-    "balayage Avon Indiana",
+    "hair color Plainfield Indiana",
+    "balayage Plainfield Indiana",
     "book with Maya",
   ],
   openGraph: {
-    title: "Hair by Maya | Avon Indiana Stylist",
+    title: "Hair by Maya | Plainfield Indiana Stylist",
     description:
-      "Book effortless color, fresh cuts, and styles you'll love with Maya at Willow & Mane in Avon, Indiana.",
+      "Book effortless color, fresh cuts, and styles you'll love with Maya at Willow & Mane in Plainfield, Indiana.",
     url: stylistConfig.siteUrl,
     siteName: stylistConfig.brandName,
     locale: "en_US",
