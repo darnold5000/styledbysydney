@@ -17,7 +17,7 @@ export type PricingCategory = {
 export const pricingDisclaimer =
   "Pricing varies by hair length, density, and time required. Quotes are available upon request.";
 
-/** Salon menu pricing — aligned with Bloom Studio Salon service menu */
+/** Salon menu pricing — aligned with Willow & Mane service menu */
 export const pricingCategories: PricingCategory[] = [
   {
     id: "color",

@@ -7,6 +7,7 @@ export type GalleryImage = {
 
 function getCalendlyUrl(): string {
   return (
+    process.env.NEXT_PUBLIC_CALENDLY_MAYA_URL ??
     process.env.NEXT_PUBLIC_CALENDLY_SYDNEY_URL ??
     process.env.NEXT_PUBLIC_BOOKING_URL ??
     ""
@@ -14,19 +15,19 @@ function getCalendlyUrl(): string {
 }
 
 export const stylistConfig = {
-  name: "Sydney",
+  name: "Maya",
   title: "Licensed Hairstylist",
-  brandName: "Styled by Sydney",
-  shortName: "Sydney Hair",
-  headline: "Hair by Sydney",
+  brandName: "Styled by Maya",
+  shortName: "Maya Hair",
+  headline: "Hair by Maya",
   tagline:
     "Creating effortless color, fresh cuts, and styles you'll love—right here in Avon, Indiana.",
   experienceBadge: "7+ Years Behind the Chair",
   specialtyBadges: ["Color Specialist", "Cuts & Styling", "Balayage & Highlights"] as const,
   servicesLinkLabel: "Explore Services",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bookwithsydney.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bookwithmaya.com",
 
-  salonName: "Bloom Studio Salon",
+  salonName: "Willow & Mane",
   location: {
     city: "Avon",
     state: "IN",
@@ -37,23 +38,23 @@ export const stylistConfig = {
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=192+N+Avon+Ave+suite+370+Avon+IN+46123",
     parkingNote:
-      "Located inside Bloom Studio Salon. Suite 370 — free parking available in the lot.",
+      "Located inside Willow & Mane. Suite 370 — free parking available in the lot.",
   },
 
   calendlyUrl: getCalendlyUrl(),
-  bookingLabel: "Book with Sydney",
+  bookingLabel: "Book with Maya",
 
-  phone: "(317) 460-3881",
-  phoneHref: "tel:+13174603881",
-  smsHref: "sms:+13174603881",
-  email: "syney_strode@yahoo.com",
+  phone: "(463) 291-8475",
+  phoneHref: "tel:+14632918475",
+  smsHref: "sms:+14632918475",
+  email: "maya.rivera@willowmane.com",
   instagram: "",
 
-  heroImage: "/images/sydney.jpg",
-  aboutImage: "/images/sydney.jpg",
+  heroImage: "/images/maya.jpg",
+  aboutImage: "/images/maya.jpg",
 
   bio: [
-    "Hi, I'm Sydney! You'll receive personalized hair color, cuts, and styling backed by over seven years behind the chair. I knew from a young age this was the career I wanted—inspired by growing up around my mom's passion for hair.",
+    "Hi, I'm Maya! You'll receive personalized hair color, cuts, and styling backed by over seven years behind the chair. I knew from a young age this was the career I wanted—inspired by growing up around my mom's passion for hair.",
     "I love creating looks that fit your lifestyle while making every appointment relaxed and enjoyable. When I'm not in the salon, you'll usually find me traveling with my husband, driving my Jeep with the top off, or spending time with our two pups.",
   ] as const,
 
@@ -98,4 +99,3 @@ export const stylistConfig = {
     url: "https://hiresignalworks.com",
   },
 } as const;
-

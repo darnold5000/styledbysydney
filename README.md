@@ -1,6 +1,6 @@
-# Styled by Sydney
+# Styled by Maya
 
-Personal one-page booking site for Sydney — a hair stylist at Bloom Studio Salon in Avon, Indiana.
+Personal one-page booking site for Maya — a hair stylist at Willow & Mane in Avon, Indiana.
 
 ## Quick start
 

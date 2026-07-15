@@ -7,7 +7,7 @@ export default function AddToHomeScreen() {
       <div className="mx-auto max-w-2xl px-5 text-center sm:px-6">
         <SectionHeading
           title="Save this booking page to your phone"
-          description="Want quick access next time? Add this page to your phone's home screen and book with Sydney anytime."
+          description={`Want quick access next time? Add this page to your phone's home screen and book with ${stylistConfig.name} anytime.`}
         />
         <div className="mt-8 grid gap-4 text-left sm:grid-cols-2">
           <div className="rounded-2xl border border-border bg-surface p-5">

@@ -35,7 +35,7 @@ export default function ContactSection() {
       <div className="mx-auto max-w-2xl px-5 text-center sm:px-6">
         <SectionHeading
           title="Contact"
-          description="Prefer to reach out directly? Text, call, or email Sydney anytime."
+          description={`Prefer to reach out directly? Text, call, or email ${stylistConfig.name} anytime.`}
         />
         <div className="mt-8">
           <BookButton size="large" label="Book an Appointment" />

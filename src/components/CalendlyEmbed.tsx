@@ -87,7 +87,7 @@ export function CalendlyEmbed({ url, className = "" }: CalendlyEmbedProps) {
       >
         <p className="font-serif text-xl text-text">Online scheduling coming soon</p>
         <p className="mt-3 text-sm text-muted">
-          Add <code className="text-accent">NEXT_PUBLIC_CALENDLY_SYDNEY_URL</code> to enable booking.
+          Add <code className="text-accent">NEXT_PUBLIC_CALENDLY_MAYA_URL</code> to enable booking.
         </p>
       </div>
     );

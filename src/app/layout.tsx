@@ -17,21 +17,21 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(stylistConfig.siteUrl),
-  title: "Hair by Sydney | Avon Indiana Stylist",
+  title: "Hair by Maya | Avon Indiana Stylist",
   description:
-    "Book effortless color, fresh cuts, and styles you'll love with Sydney — licensed hairstylist at Bloom Studio Salon in Avon, Indiana.",
+    "Book effortless color, fresh cuts, and styles you'll love with Maya — licensed hairstylist at Willow & Mane in Avon, Indiana.",
   keywords: [
     "Avon Indiana hair stylist",
     "hair stylist in Avon IN",
-    "Bloom Studio Salon stylist",
+    "Willow & Mane stylist",
     "hair color Avon Indiana",
     "balayage Avon Indiana",
-    "book with Sydney",
+    "book with Maya",
   ],
   openGraph: {
-    title: "Hair by Sydney | Avon Indiana Stylist",
+    title: "Hair by Maya | Avon Indiana Stylist",
     description:
-      "Book effortless color, fresh cuts, and styles you'll love with Sydney at Bloom Studio Salon in Avon, Indiana.",
+      "Book effortless color, fresh cuts, and styles you'll love with Maya at Willow & Mane in Avon, Indiana.",
     url: stylistConfig.siteUrl,
     siteName: stylistConfig.brandName,
     locale: "en_US",
