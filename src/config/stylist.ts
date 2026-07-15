@@ -1,8 +1,6 @@
 export type GalleryImage = {
   src: string;
   alt: string;
-  /** TODO: Replace with real before/after, color, or styling photos */
-  placeholder?: boolean;
 };
 
 function getCalendlyUrl(): string {
@@ -60,34 +58,28 @@ export const stylistConfig = {
 
   galleryImages: [
     {
-      src: "/images/gallery/placeholder-1.jpg",
-      alt: "Hair color work — placeholder",
-      placeholder: true,
+      src: "/images/gallery/before-after-1.jpg",
+      alt: "Before and after — long auburn to layered cut with blonde highlights",
     },
     {
-      src: "/images/gallery/placeholder-2.jpg",
-      alt: "Styling photo — placeholder",
-      placeholder: true,
+      src: "/images/gallery/before-after-2.jpg",
+      alt: "Before and after — long blonde to textured chin-length bob",
     },
     {
-      src: "/images/gallery/placeholder-3.jpg",
-      alt: "Salon chair photo — placeholder",
-      placeholder: true,
+      src: "/images/gallery/before-after-3.jpg",
+      alt: "Before and after — men's cut and beard transformation",
     },
     {
-      src: "/images/gallery/placeholder-4.jpg",
-      alt: "Before and after — placeholder",
-      placeholder: true,
+      src: "/images/gallery/before-after-4.jpg",
+      alt: "Before and after — brunette to ash blonde balayage with curtain bangs",
     },
     {
-      src: "/images/gallery/placeholder-5.jpg",
-      alt: "Color and cut — placeholder",
-      placeholder: true,
+      src: "/images/gallery/before-after-5.jpg",
+      alt: "Before and after — dark hair to shoulder-length lob with caramel highlights",
     },
     {
-      src: "/images/gallery/placeholder-6.jpg",
-      alt: "Cut and style — placeholder",
-      placeholder: true,
+      src: "/images/gallery/before-after-6.jpg",
+      alt: "Before and after — long dark waves to sleek chin-length bob",
     },
   ] satisfies GalleryImage[],
 
