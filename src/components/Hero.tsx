@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { stylistConfig } from "@/config/stylist";
 import BookButton from "./BookButton";
 
@@ -55,15 +54,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative order-1 mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-accent-soft/40 shadow-lg lg:sticky lg:top-8 lg:mx-0 lg:max-w-md">
-          <Image
-            src={stylistConfig.heroImage}
-            alt={`${stylistConfig.name}, licensed hairstylist in ${stylistConfig.location.label}`}
-            fill
-            priority
-            className="object-cover object-top"
-            sizes="(max-width: 1024px) 100vw, 400px"
-          />
+        <div className="relative order-1 mx-auto flex aspect-[4/5] w-full max-w-sm items-center justify-center overflow-hidden rounded-2xl border border-accent/20 bg-accent-soft/40 shadow-lg lg:sticky lg:top-8 lg:mx-0 lg:max-w-md">
+          <p className="font-serif text-2xl font-medium text-accent">Image Coming Soon</p>
         </div>
       </div>
     </section>
